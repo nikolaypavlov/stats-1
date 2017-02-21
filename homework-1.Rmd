@@ -3,7 +3,10 @@ title: "Home assignment 1"
 author: "Mykola Pavlov"
 date: "1/22/2017"
 output:
-  github_document: default
+  github_document:
+    toc: true
+    toc_depth: 2
+    dev: jpeg
 ---
 
 ```{r setup, include=FALSE}
@@ -45,7 +48,7 @@ df %>%
   labs(x="random variable", y="values")
 ```
 
-## Taks 2a
+### Taks 2a
 
 It can be seen that median and both quartiles were less affected by the presence of the outliers, than mean and variance.
 
@@ -63,7 +66,7 @@ df %>%
   labs(x="random variable", y="values")
 ```
 
-## Taks 2b
+### Taks 2b
 
 ```{r}
 set.seed(3)
@@ -74,7 +77,7 @@ df <- m %>%
   })
 ```
 
-## Taks 2c
+### Taks 2c
 
 ```{r}
 df %>% 

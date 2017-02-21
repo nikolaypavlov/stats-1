@@ -3,6 +3,9 @@ Home assignment 1
 Mykola Pavlov
 1/22/2017
 
+-   [Problem 1: Descriptive Statistics](#problem-1-descriptive-statistics)
+-   [Problem 2: Inferential Statistics](#problem-2-inferential-statistics)
+
 Problem 1: Descriptive Statistics
 ---------------------------------
 
@@ -26,7 +29,7 @@ df %>%
   geom_histogram(colour="black", binwidth = 2)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-3-1.jpeg)
 
 ``` r
 df %>% 
@@ -35,10 +38,9 @@ df %>%
   labs(x="random variable", y="values")
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-4-1.jpeg)
 
-Taks 2a
--------
+### Taks 2a
 
 It can be seen that median and both quartiles were less affected by the presence of the outliers, than mean and variance.
 
@@ -59,10 +61,9 @@ df %>%
   labs(x="random variable", y="values")
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-6-1.jpeg)
 
-Taks 2b
--------
+### Taks 2b
 
 ``` r
 set.seed(3)
@@ -73,8 +74,7 @@ df <- m %>%
   })
 ```
 
-Taks 2c
--------
+### Taks 2c
 
 ``` r
 df %>% 
@@ -83,7 +83,7 @@ df %>%
   facet_wrap(~ size)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-8-1.jpeg)
 
 ``` r
 df %>% 
@@ -92,7 +92,7 @@ df %>%
   labs(x="Size", y="Values")
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-9-1.jpeg)
 
 ``` r
 df %>% 
@@ -100,7 +100,7 @@ df %>%
   geom_histogram(colour="black", binwidth = 2)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-10-1.jpeg)
 
 ### Task 2d
 
@@ -190,19 +190,19 @@ C3 <- cor(Y10000x20)
 corrplot(C1)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-16-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-16-1.jpeg)
 
 ``` r
 corrplot(C2)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-17-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-17-1.jpeg)
 
 ``` r
 corrplot(C3)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-18-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-18-1.jpeg)
 
 ### Task 5a
 
@@ -247,14 +247,14 @@ colnames(x1) <- c("var1", "var2")
 pairs.panels(x1)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-22-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-22-1.jpeg)
 
 ``` r
 colnames(x2) <- c("var1", "var2")
 pairs.panels(x2)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-23-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-23-1.jpeg)
 
 ### Task 5b
 
@@ -298,7 +298,7 @@ df_gumbel %>%
   geom_point(aes(color = corr_type))
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-25-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-25-1.jpeg)
 
 From the plot below we can see that there is no clear relation between parameter value and correlation both for Pearson and Spearmen functions. Though values seem to cluster in the interval between -0.46 and -0.48.
 
@@ -309,7 +309,7 @@ df_clayton %>%
   geom_point(aes(color = corr_type))
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-26-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-26-1.jpeg)
 
 ### Taks 6a
 
@@ -318,7 +318,7 @@ kde <- density(data, kernel = "gaussian", bw = "nrd0")
 plot(kde)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-27-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-27-1.jpeg)
 
 ### Taks 6b
 
@@ -347,7 +347,7 @@ df %>%
   plot_denisty2d(.)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-29-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-29-1.jpeg)
 
 Problem 2: Inferential Statistics
 ---------------------------------
@@ -384,7 +384,7 @@ mean_plot <- df %>%
 mean_plot
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-31-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-31-1.jpeg)
 
 ``` r
 var_plot <- df %>%
@@ -397,7 +397,7 @@ var_plot <- df %>%
 var_plot
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-32-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-32-1.jpeg)
 
 ### Task 1c
 
@@ -420,7 +420,7 @@ mean_plot +
   geom_errorbar(aes(n, ymin = lower_bound, ymax = upper_bound), size = 0.5)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-33-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-33-1.jpeg)
 
 We can see that in more than 95% of cases the population mean value lies within confidence interval. Which is what we expected.
 
@@ -445,7 +445,7 @@ var_plot +
   geom_errorbar(aes(n, ymin = lower_bound, ymax = upper_bound), size = 0.5)
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-35-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-35-1.jpeg)
 
 We can see that in more than 95% of cases the population mean value lies within confidence interval. Which is what we expected.
 
@@ -624,4 +624,4 @@ tests %>%
   geom_bar(stat = "identity")
 ```
 
-![](homework-1_files/figure-markdown_github/unnamed-chunk-44-1.png)
+![](homework-1_files/figure-markdown_github/unnamed-chunk-44-1.jpeg)
