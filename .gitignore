@@ -1,0 +1,6 @@
+*.Rproj
+.Rhistory
+.DS_Store
+Readme_cache
+*_cache
+.Rproj.*
